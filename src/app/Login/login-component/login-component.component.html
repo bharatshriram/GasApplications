@@ -1,0 +1,127 @@
+<!doctype html>
+<html lang="en">
+
+ <head>
+
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  
+  <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+ 
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script> -->
+</head> 
+<body>
+
+  <!-- <div class="col-md-6 col-md-offset-3">
+    <h2>Login</h2>
+    <div class="row">
+      <form #empForm="ngForm" novalidate>
+
+        <div class="row">
+          <div class="input-field col s2">
+            <input id="username" type="text" class="validate" name="username" [(ngModel)]="login.username" #username="ngModel" required
+              pattern="[a-z A-z]+">
+            <label for="username">UserName</label>
+
+            <div *ngIf="username.invalid && (username.dirty || username.touched)" class="error">
+
+              <div *ngIf="username.errors.required">
+                Name is required.
+              </div>
+              <div *ngIf="username.errors.pattern">
+                Name must be Alphabets only.
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="input-field col s2">
+            <input id="password" type="text" class="validate" name="lastName" [(ngModel)]="login.password" #password="ngModel" required>
+            <label for="password">password</label>
+            <div *ngIf="password.invalid && (password.dirty || password.touched)" class="error">
+
+              <div *ngIf="password.errors.required">
+                password is required.
+              </div>
+
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="input-field col s2">
+            <button class="waves-effect waves-light btn" [disabled]="!empForm.valid" (click)="loginCheck();">Submit</button>
+          </div>
+        </div>
+      </form>
+    </div>
+  </div>  -->
+  <!-- <div class="col-md-6 col-md-offset-3">
+      <h2>Login</h2>
+      <div class="row">
+  <form class="example-form"  #empForm="ngForm" novalidate>
+    <mat-form-field class="example-full-width">
+      <input matInput placeholder="UserName" id="username" type="text" class="validate" name="username" [(ngModel)]="login.username" #username="ngModel" required
+      pattern="[a-z A-z]+">
+    </mat-form-field>
+
+       <div *ngIf="username.invalid && (username.dirty || username.touched)" class="error">
+
+        <div *ngIf="username.errors.required">
+          Name is required.
+        </div>
+        <div *ngIf="username.errors.pattern">
+          Name must be Alphabets only.
+        </div>
+      </div>
+  
+    <mat-form-field class="example-full-width">
+      <textarea matInput placeholder="Leave a comment"></textarea>
+    </mat-form-field>
+  </form>
+</div>
+  </div> -->
+
+
+  <mat-toolbar>
+      <span>LOGIN</span>
+    </mat-toolbar>
+    <mat-card class="my-card">
+       <mat-card-content>
+          <form class="my-form" #empForm="ngForm" novalidate>
+             <mat-form-field class="full-width">
+                <mat-label>username</mat-label>
+                <input  matInput  placeholder="username" id="username" type="text" class="validate" name="username" [(ngModel)]="login.username" #username="ngModel" required
+                pattern="[a-z A-z]+" >
+             </mat-form-field>
+
+             <div *ngIf="username.invalid && (username.dirty || username.touched)" class="error">
+
+                <div *ngIf="username.errors.required">
+                  Name is Required.
+                </div>
+                <div *ngIf="username.errors.pattern">
+                  Name must be Alphabets only.
+                </div>
+              </div>
+
+             <mat-form-field class="full-width">
+                <mat-label>Password</mat-label>
+                <input  matInput placeholder="Password" id="password" name="password" [(ngModel)]="login.password" type="password" #password="ngModel" required>
+             </mat-form-field>
+
+             <div *ngIf="password.invalid && (password.dirty || password.touched)" class="error">
+
+                <div *ngIf="password.errors.required">
+                  Password is Required.
+                </div>
+              </div>
+          </form>
+       </mat-card-content>
+       <mat-card-actions>
+          <button mat-raised-button [disabled]="!empForm.valid" (click)="loginCheck()" color="primary">LOGIN</button>
+       </mat-card-actions>
+    </mat-card>
+
+
+
+</body>
+</html>

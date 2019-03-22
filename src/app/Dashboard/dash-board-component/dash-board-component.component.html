@@ -1,0 +1,63 @@
+<!-- <table mat-table [dataSource]="dataSource" class="mat-elevation-z8">
+
+
+  
+  <ng-container matColumnDef="position">
+    <th mat-header-cell *matHeaderCellDef> No. </th>
+    <td mat-cell *matCellDef="let element"> {{element.position}} </td>
+  </ng-container>
+
+  
+  <ng-container matColumnDef="name">
+    <th mat-header-cell *matHeaderCellDef> Name </th>
+    <td mat-cell *matCellDef="let element"> {{element.name}} </td>
+  </ng-container>
+
+   
+  <ng-container matColumnDef="weight">
+    <th mat-header-cell *matHeaderCellDef> Weight </th>
+    <td mat-cell *matCellDef="let element"> {{element.weight}} </td>
+  </ng-container>
+
+  
+  <ng-container matColumnDef="symbol">
+    <th mat-header-cell *matHeaderCellDef> Symbol </th>
+    <td mat-cell *matCellDef="let element"> {{element.symbol}} </td>
+  </ng-container>
+
+  <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+  <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+</table> -->
+
+
+<div class="col-md-12">
+</div>
+
+<div class="row">
+  <div class="col-md-4"><span class="pull-left"><i><u class="">Dashboard</u></i></span></div>
+  <div class="col-md-4">.col-md-4</div>
+  <div class="col-md-4">.col-md-4</div>
+</div>
+
+
+<br/>
+<br/>
+<div class="table-wrapper-scroll-y">
+
+<table id="dtVerticalScrollExample" class="table table-striped table-bordered table-sm" cellspacing="0" width="100%">
+  <thead>
+    <tr>
+      <th class="th-sm">custID</th>
+      <th class="th-sm">Name</th>
+      <th class="th-sm">house</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let dataSourcess of dataSource">
+      <td>{{ dataSourcess.custID }}</td>
+      <td>{{ dataSourcess.block }}</td>
+      <td>{{ dataSourcess.property }}</td>
+    </tr>
+  </tbody>
+</table>
+</div>
