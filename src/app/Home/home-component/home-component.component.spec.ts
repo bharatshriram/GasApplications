@@ -5,7 +5,7 @@ import { HomeComponentComponent } from './home-component.component';
 describe('HomeComponentComponent', () => {
   let component: HomeComponentComponent;
   let fixture: ComponentFixture<HomeComponentComponent>;
-
+// this is a component
   beforeEach(async(() => {
     TestBed.configureTestingModule({
       declarations: [ HomeComponentComponent ]
